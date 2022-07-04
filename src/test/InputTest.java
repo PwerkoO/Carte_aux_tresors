@@ -16,7 +16,7 @@ class InputTest {
 
     @Test
     void readMap() throws IOException, NullPointerException {
-        File folder = new File("map");
+        File folder = new File("maps");
         for(File file : Objects.requireNonNull(folder.listFiles())){
             List<String> mapInformation = Files.readAllLines(file.toPath());
             final String[] s = mapInformation.get(0).replaceAll(" ","").split("-");
